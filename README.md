@@ -1,6 +1,6 @@
 This repository contains the source of the **O13** Cosmochrony paper  
-[*Asymptotic Stability of Exact Weil-Block Capacity on Heisenberg Graphs:
-Extended Prime Range, Variance Reduction, and Requalification of the δ–β* Tension*](out/SpectralO13.pdf).
+*Asymptotic Stability of Exact Weil-Block Capacity on Heisenberg Graphs:
+Extended Prime Range, Variance Reduction, and Requalification of the δ–β* Tension*.
 
 This work extends the **spectral admissibility sub-programme** by testing the
 finite-size hypothesis left open in **O12**, through an extension of the exact

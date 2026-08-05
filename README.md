@@ -71,7 +71,9 @@ O13 performs the decisive test left open by O12:
 - **O13**: asymptotic test and falsification of the finite-size explanation
 
 O13 is the first step where the discrepancy between theory and phenomenology
-is shown to be **structural rather than numerical**.
+is shown **not to be a finite-size artefact**; whether it is otherwise
+"structural" awaits the regime determination in the O3–O7 relation described
+below, since no $\beta^*$ constraint is currently drawn at all.
 
 # What O13 Adds
 
@@ -166,8 +168,10 @@ The programme now establishes:
 
 - the exact observable is correctly defined
 - the exact exponent is reliably measurable
-- the asymptotic trend is downward
-- the mismatch with phenomenology is intrinsic
+- the asymptotic trend is downward, toward the now-exact value $\delta_{\mathrm{exact}}=3$
+- the mismatch with phenomenology is not a finite-size artefact and not a
+  central-coordinate effect; whether it survives as a genuine tension depends
+  on an unresolved regime question, not yet on established physics
 
 # What O13 Resolves
 

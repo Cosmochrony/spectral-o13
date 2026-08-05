@@ -53,7 +53,7 @@ and Requalification of the
     whether $\dhat(q)$ was a finite-size artefact drifting toward the
     phenomenological target range $[7.4,10.6]$.
     The central result is that $\dhat$ exhibits a monotone decrease from $q = 61$
-    onward: the sequence $4.42, 4.80, 4.52, 4.27, 3.59$ at
+    onward: the sequence $4.42, 4.80, 4.51, 4.27, 3.59$ at
     $q \in \{29, 61, 101, 151, 211\}$ shows no upward drift toward the target range,
     and all fitting strategies are consistent with $\delta_\infty < 5.0$ — indeed,
     consistent with convergence toward the exact value $3$ now established
@@ -124,10 +124,11 @@ and Requalification of the
 
   O12 measured $\dhat \approx 4.3$--$4.8$ at $q \in \{29, 53, 61\}$ and, propagating
   through the structural relation $\bstar = 1/(\delta + 1/2)$ from
-  O7~\cite{Beau2026a11}, reported $\bstar \approx 0.19$--$0.20$, outside the
+  O7~\cite{Beau2026a11}, originally reported a $\bstar$ value outside the
   phenomenological window $(0.09, 0.13)$ from charged lepton mass
   ratios~\cite{Beau2026a7}.
-  O12's own corrective revision establishes what this measurement actually is:
+  O12's own corrective revision withdraws that propagated value (see below) and
+  establishes what the underlying measurement actually is:
   the fingerprint~\eqref{eq:fingerprint} reduces, for a generic block, to an exact
   closed form depending on $\mathbf{c}$ only through a projective pair
   $(\alpha,\beta)$, making $\Sigma_n^{(\mathbf{c})}$ \emph{exactly} independent of
@@ -177,7 +178,10 @@ and Requalification of the
   \section{Benchmark Protocol}
   \label{sec:protocol}
 
-  We follow the O12 protocol without modification.
+  We follow the O12 computational pipeline (fingerprint construction,
+  Gram--Schmidt span tracking, log-log fitting) without modification; the
+  random seeding differs, using a single seed per prime (\texttt{RNG\_BASE}
+  $+\,q$) except at $q=29$, where it coincides with O12's own first seed.
   For each prime $q$, we build BFS shells of $\mathrm{Cay}(\Gq, S)$ up to
   fraction $\mathrm{bfs\_frac}$ of $|\Gq| = q^3$, sample $M_{\mathrm{block}}$
   generic blocks $\mathbf{c}$ (with $c_k \neq 0$ and
@@ -235,7 +239,7 @@ and Requalification of the
       \midrule
       29            & $[2,  5]$   & 4  & 4.42 & 0.08 & 0.998 & \checkmark & \checkmark \\
       61            & $[2,  7]$   & 6  & 4.80 & ---  & 0.993 & \checkmark & \checkmark \\
-      101           & $[3, 10]$ & 8  & 4.52 & ---  & 0.996 & \checkmark & \checkmark \\
+      101           & $[3, 10]$ & 8  & 4.51 & ---  & 0.996 & \checkmark & \checkmark \\
       151           & $[3, 12]$ & 10 & 4.27 & ---  & 0.993 & \checkmark & \checkmark \\
       211$^\dagger$ & $[3, 13]$ & 11 & 3.59 & ---  & 0.996 & \checkmark & \checkmark \\
       \midrule
@@ -280,7 +284,7 @@ and Requalification of the
 
   \begin{proposition}[Absence of upward drift]
     \label{prop:stability}
-    The sequence $\dhat(29) = 4.42$, $\dhat(61) = 4.80$, $\dhat(101) = 4.52$,
+    The sequence $\dhat(29) = 4.42$, $\dhat(61) = 4.80$, $\dhat(101) = 4.51$,
     $\dhat(151) = 4.27$, $\dhat(211) = 3.59$ satisfies:
     \begin{enumerate}
       \item[(i)] $\dhat(q) < 5.0$ for all $q \in \{29, 61, 101, 151, 211\}$;
@@ -299,23 +303,30 @@ and Requalification of the
   yielding a longer window, lower variance, and equally high $R^2$.
   The $q = 211$ entry carries the caveat of reduced BFS coverage (see
   Table~\ref{tab:params}) and should be read as a robustness point; it
-  extends the decreasing trend observed at the fully-controlled primes
-  $q \in \{101, 151\}$ without serving as its primary evidence.
+  extends the decreasing trend observed at $q \in \{101, 151\}$ — both
+  untruncated within their fitting windows despite $q=151$'s reduced
+  \texttt{bfs\_frac} (Table~\ref{tab:params}) — without serving as its primary
+  evidence.
   This combination is decisive: the exponent decreases precisely in the regime
   where the measurement becomes most reliable, ruling out the possibility that
   the observed downward trend is a transient numerical artefact.
 
-  \begin{remark}[Independent confirmation of O12's exact asymptotic result]
+  \begin{remark}[Consistency with O12's exact asymptotic result]
     \label{rem:confirms-o12}
     O12's corrective revision derives, in closed form, that the unfolded
     intrinsic exponent of this construction is exactly $\delta_{\mathrm{exact}}=3$,
     in the double limit $q\to\infty$, $n\to\infty$, $n=o(\sqrt q)$.
     This proposition's decreasing sequence
-    $4.80\to4.52\to4.27\to3.59$ — collected independently, before that closed
-    form existed — is direct numerical evidence \emph{for} this exact result: it
-    is exactly the finite-$q$ crossover behaviour O12's Section~6 predicts for
-    slopes fitted below the fully unfolded regime, converging toward, not away
-    from, $3$.
+    $4.80\to4.51\to4.27\to3.59$ — collected independently, before that closed
+    form existed, and single-seed at every prime beyond $q=29$ — is consistent
+    with, and supporting empirical evidence for, this exact result: it moves in
+    the direction O12's Section~6 predicts for slopes fitted below the fully
+    unfolded regime, toward $3$, not away from it.
+    The successive decrements ($0.29$, $0.24$, $0.68$) are of comparable size to
+    the block-sampling spread at these primes, so the sequence should be read
+    as directionally consistent with the predicted crossover, not as a precise
+    trace of it; the robust conclusion — no drift toward $[7.4,10.6]$ — does not
+    depend on the sequence being strictly monotone (Section~\ref{sec:analysis}).
   \end{remark}
 
   \section{Analysis: Non-Monotonicity, Convergence, Variance Reduction}
@@ -324,11 +335,15 @@ and Requalification of the
   \subsection{Non-monotonicity and its scope}
 
     The sequence exhibits one non-monotone step: $\dhat(29) = 4.42 < \dhat(61) = 4.80$,
-    followed by a strict monotone decrease $4.80 \to 4.52 \to 4.27 \to 3.59$ from
+    followed by a strict monotone decrease $4.80 \to 4.51 \to 4.27 \to 3.59$ from
     $q = 61$ to $q = 211$.
-    The peak at $q = 61$ is consistent with inter-seed spread at small primes with
-    single-seed runs: the inter-seed standard deviation at $q = 29$ (where
-    $N_{\mathrm{seed}} = 3$) is $\sigma_{\mathrm{seed}} = 0.08$.
+    Both $q=29$ and $q=61$ use small block samples ($M_{\mathrm{block}}=50$ and
+    $15$ respectively, Table~\ref{tab:params}) at a single seed each beyond the
+    three seeds averaged at $q=29$ itself, so a step of this size is plausibly
+    block-sampling noise rather than a physical feature; the reported
+    $\sigma_{\mathrm{seed}}=0.08$ at $q=29$ (Table~\ref{tab:delta}) is itself
+    only a three-seed estimate and should not be read as a precise bound on
+    that noise.
     The monotone decrease from $q = 61$ to $q = 211$ is the physically relevant trend.
 
   \subsection{Convergence: decreasing trend without identified plateau}
@@ -383,20 +398,29 @@ and Requalification of the
   The sequence crosses the condition~(E2) threshold $\varepsilon_E = 1$
   between $q = 101$ and $q = 151$.
 
-  The structural interpretation, established exactly by O12's correction, is
-  combinatorial rather than representation-theoretic.
+  The structural interpretation is combinatorial rather than
+  representation-theoretic, and is the same saturation-depth mechanism O12
+  establishes for the finite-$q$ crossover slope itself (Section~\ref{sec:question}).
   A generic block reduces to a projective pair $(\alpha,\beta)$ indexing at most
-  nine covering centres in $\mathbb{Z}/q\mathbb{Z}$; a positive but $O(1/q)$
-  fraction of generic blocks is \emph{degenerate} (fewer than nine distinct
-  centres, e.g.\ $\alpha=0$ or $\alpha=\pm2\beta$), contributing a smaller
-  incremental rank than the generic value of $18$.
-  As $q$ grows, this degenerate fraction shrinks as $O(1/q)$, so an increasing
-  proportion of sampled blocks share the same incremental-rank behaviour,
-  reducing inter-block variance and moving the mean exponent $\dhat$ toward a
-  genuinely block-by-block property, not merely an ensemble mean.
+  nine covering centres in $\mathbb{Z}/q\mathbb{Z}$, and saturates — stops
+  contributing new rank — once these centres' radius-$(n{+}1)$ covering
+  intervals have merged, at a depth $n_c^*$ that scales linearly in $q$.
+  At small $q$ relative to the fitting window, a large fraction of the sampled
+  blocks have already reached or passed this saturation depth by the window's
+  upper boundary, so the ensemble mixes ``live'' blocks (still contributing new
+  rank) with already-saturated ones (contributing none) at every depth in the
+  window — the same mean-estimator conflation O12's audit identifies in the
+  original extraction.
+  As $q$ grows, the saturation depth grows linearly while the fitting window
+  stays short (Table~\ref{tab:params}), so a shrinking fraction of sampled
+  blocks saturate within the window, and the ensemble becomes more homogeneous.
+  (The much smaller fraction of blocks that are combinatorially
+  \emph{degenerate} — fewer than nine distinct covering centres from the
+  outset, e.g.\ $\alpha=0$ or $\alpha=\pm2\beta$ — is a separate effect and is
+  not the driver of the variance reduction observed here.)
   No central-phase or coherence mechanism is involved: the effect is a pure
-  finite-sampling artefact of how many blocks happen to be degenerate at a
-  given prime.
+  finite-sampling artefact of how many blocks happen to already be saturated,
+  not degenerate, at a given prime and window.
 
   A direct consequence is that the measurement quality improves with $q$:
   the $q = 151$ extraction ($10$ points, $R^2 = 0.993$, E2 satisfied) and the
@@ -448,9 +472,9 @@ and Requalification of the
 
   \subsection{No constraint is propagated through the structural relation}
 
-    O12's original Section~7.1 maintained a three-level distinction and
-    propagated its Level~1 measurement through Level~2 ($\bstar=1/(\delta+1/2)$,
-    O7~\cite{Beau2026a11}) to a numeric Level~3 comparison against
+    O12's original Section~7.1 propagated its finite-$q$ measurement through
+    the structural relation $\bstar=1/(\delta+1/2)$ (O7~\cite{Beau2026a11}) to
+    a numeric comparison against the phenomenological window
     $\bstar\in(0.09,0.13)$ from charged lepton mass ratios~\cite{Beau2026a7}.
     O12's corrective revision withdraws that propagation, and the present paper
     follows suit rather than propagating its own five-prime sequence in its
@@ -460,7 +484,7 @@ and Requalification of the
     This construction carries (at least) three distinct quantities that could
     each be read as ``the'' $\delta$ input to $g(\delta)=1/(\delta+\tfrac12)$:
     the finite-$q$ fitted slope (this paper's own sequence
-    $4.42\to4.80\to4.52\to4.27\to3.59$), the unfolded intrinsic exponent
+    $4.42\to4.80\to4.51\to4.27\to3.59$), the unfolded intrinsic exponent
     $\delta_{\mathrm{exact}}=3$ that this sequence is empirically converging
     toward (Remark~\ref{rem:confirms-o12}), and the compact scaling function at
     the saturation scale $n\asymp q$, which carries no exponent at all.
@@ -476,9 +500,10 @@ and Requalification of the
 
     Source~S1 required $\dhat(q) \to [7.4, 10.6]$ as $q \to \infty$.
     Proposition~\ref{prop:stability} refutes this: the downward trend from
-    $q = 61$ to $q = 211$ is \emph{established} at the fully-controlled primes
-    $q \in \{101, 151\}$ and \emph{extended} --- not proven --- by the
-    robustness point $q = 211$.
+    $q = 61$ to $q = 211$ is \emph{established} at $q \in \{101, 151\}$ — both
+    untruncated within their fitting windows despite $q=151$'s reduced
+    \texttt{bfs\_frac} (Table~\ref{tab:params}) — and \emph{extended} --- not
+    proven --- by the robustness point $q = 211$.
     No extrapolation of the five-prime dataset produces $\delta_\infty > 5.0$.
     While a second seed at $q = 211$ would strengthen the robustness point, the
     central result of S1's closure rests on $q \in \{101, 151\}$ alone.
@@ -532,7 +557,7 @@ and Requalification of the
   The following facts are established:
 
   \begin{enumerate}
-    \item The sequence $\dhat(q) = 4.42, 4.80, 4.52, 4.27, 3.59$ at
+    \item The sequence $\dhat(q) = 4.42, 4.80, 4.51, 4.27, 3.59$ at
     $q \in \{29, 61, 101, 151, 211\}$ shows a strict monotone decrease from
     $q = 61$ onward, with no upward drift toward $[7.4, 10.6]$.
     \item Condition~(E2) is satisfied at $q \in \{151, 211\}$:

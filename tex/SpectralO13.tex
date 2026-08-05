@@ -43,34 +43,41 @@ and Requalification of the
     The O-series of the Cosmochrony admissibility sub-programme extracts the
     projective capacity exponent $\delta$ from exact Weil-block representations on
     Heisenberg Cayley graphs $\mathrm{Cay}(\Gq, S)$ with $\Gq = \heis$.
-    O12 established $\dhat \approx 4.3$--$4.8$ at primes $q \leq 61$ and identified
-    a tension with the phenomenological window $\bstar \in (0.09, 0.13)$, leaving
-    open two candidate explanations: a finite-size artefact, or a structural gap
-    in the exact-block $\delta \mapsto \bstar$ relation.
-    The present paper tests the finite-size hypothesis by extending the computation
-    to $q \in \{101, 151, 211\}$, with $q = 211$ serving as a robustness extension
-    under a reduced BFS coverage protocol.
+    O12 measured $\dhat \approx 4.3$--$4.8$ at primes $q \leq 61$; its corrective
+    revision shows this is a finite-$q$ crossover statistic, exactly independent of
+    the central coordinate $\gamma$ by an algebraic identity, and derives the
+    intrinsic unfolded exponent exactly, $\delta_{\mathrm{exact}}=3$.
+    The present paper, whose own numerical results were obtained independently of
+    that closed form, extends the computation to $q \in \{101, 151, 211\}$
+    (with $q=211$ a robustness extension under reduced BFS coverage) to test
+    whether $\dhat(q)$ was a finite-size artefact drifting toward the
+    phenomenological target range $[7.4,10.6]$.
     The central result is that $\dhat$ exhibits a monotone decrease from $q = 61$
     onward: the sequence $4.42, 4.80, 4.52, 4.27, 3.59$ at
     $q \in \{29, 61, 101, 151, 211\}$ shows no upward drift toward the target range,
-    and all fitting strategies are consistent with $\delta_\infty < 5.0$.
+    and all fitting strategies are consistent with $\delta_\infty < 5.0$ — indeed,
+    consistent with convergence toward the exact value $3$ now established
+    independently.
     Two further findings sharpen this conclusion.
     First, the inter-block variance ratio $V_n^{\max}$ decreases from $5.20$ to
     $0.30$ as $q$ increases from $29$ to $211$; condition~(E2) is satisfied at
     $q \geq 151$, establishing the extracted exponents as block-by-block properties,
-    not merely means.
+    not merely means — a decrease now understood exactly, as the shrinking
+    fraction of degenerate blocks in a finite covering problem, not a central-phase
+    effect.
     Second, the fitting window grows from $4$ to $11$ points and $R^2 > 0.993$
     throughout: the measurement becomes strictly more reliable at larger~$q$.
     The finite-size hypothesis is ruled out in its strong form --- namely that
     the exact-block exponent would drift toward the phenomenological target range
     at larger primes.
-    While subleading corrections beyond the explored range cannot be strictly
-    excluded, the observed stability of $\dhat$ under improving measurement
-    conditions strongly disfavours a finite-size explanation of the tension.
-    The tension is requalified: its resolution requires revisiting the structural
-    relation $\delta \mapsto \bstar$ in the exact-block setting, where the
-    observable retains a central-coordinate degree of freedom whose contribution
-    to $\bstar$ is not yet derived.
+    The tension with $\bstar\in(0.09,0.13)$ is not resolved by a central-coordinate
+    degree of freedom, which plays no role in this observable at any prime tested:
+    its resolution requires determining which of several structurally distinct
+    quantities — the finite-$q$ crossover slope, the unfolded exponent
+    $\delta_{\mathrm{exact}}=3$, or the saturation-scale scaling function of the
+    same construction — the structural relation $\delta \mapsto \bstar$ is meant
+    to take as input.
+    No numeric constraint on $\bstar$ is drawn here.
   \end{abstract}
 
   \paragraph{Keywords.}
@@ -115,32 +122,53 @@ and Requalification of the
   measures the fraction of new independent directions contributed by shell $S_n$
   to the running Gram--Schmidt basis of block $H_{\mathbf{c}}$.
 
-  O12 found $\dhat \approx 4.3$--$4.8$ at $q \in \{29, 53, 61\}$
-  (Case~B: exact $>$ proxy) and identified the coherence length $\ell_\gamma(n)$
-  as the mechanism.
-  Propagating through the structural relation $\bstar = 1/(\delta + 1/2)$ from
-  O7~\cite{Beau2026a11} gave $\bstar \approx 0.19$--$0.20$, outside the
+  O12 measured $\dhat \approx 4.3$--$4.8$ at $q \in \{29, 53, 61\}$ and, propagating
+  through the structural relation $\bstar = 1/(\delta + 1/2)$ from
+  O7~\cite{Beau2026a11}, reported $\bstar \approx 0.19$--$0.20$, outside the
   phenomenological window $(0.09, 0.13)$ from charged lepton mass
   ratios~\cite{Beau2026a7}.
+  O12's own corrective revision establishes what this measurement actually is:
+  the fingerprint~\eqref{eq:fingerprint} reduces, for a generic block, to an exact
+  closed form depending on $\mathbf{c}$ only through a projective pair
+  $(\alpha,\beta)$, making $\Sigma_n^{(\mathbf{c})}$ \emph{exactly} independent of
+  the central coordinates $\gamma_k$ and the translational coordinates $a_k$ — an
+  algebraic identity, not an empirical regularity.
+  Consequently the finite-$q$ fitted slopes $\dhat\approx4.3$--$4.8$ are finite-size
+  crossover statistics of a block saturation-depth distribution, not estimates of an
+  intrinsic asymptotic exponent; the intrinsic unfolded exponent is derived exactly,
+  $\delta_{\mathrm{exact}}=3$, from Heisenberg shell growth alone, in the double limit
+  $q\to\infty$, $n\to\infty$, $n=o(\sqrt q)$.
+  No coherence or metaplectic-phase mechanism — including the coherence length
+  $\ell_\gamma(n)$ — can affect this observable.
+  O12's corrected paper accordingly withdraws its $\bstar$ propagation, pending
+  determination of which of several structurally distinct quantities the O3--O7
+  relation's derivation takes as input (Section~\ref{sec:tension}).
 
   \section{The Question: Finite-Size or Structure?}
   \label{sec:question}
 
-  O12 presented two candidate explanations for the tension:
+  O12's original paper presented two candidate explanations for the tension;
+  O12's corrective revision resolves which quantity the second explanation should
+  actually be understood to concern:
 
   \begin{enumerate}
     \item[(S1)] \emph{Finite-size artefact.}
     The primes $q \leq 61$ are insufficient for asymptotic convergence;
     $\dhat(q)$ will drift upward toward $[7.4, 10.6]$ at larger $q$.
-    O12 identified this as the most natural resolution.
-    \item[(S2)] \emph{Structural gap in the exact-block observable.}
+    O12 originally identified this as the most natural resolution.
+    \item[(S2)] \emph{Regime mismatch in the exact-block observable.}
     The Weil-block capacity $\Sigma_n^{(\mathbf{c})}$, normalised by $|S_n|$
     and measured in a representation space of dimension $q$, is not the same
     observable as the proxy-level capacity entering the O7
     derivation~\cite{Beau2026a11}.
-    In particular, the central coordinate $\gamma$ contributes via the phase
-    $\psi_{c_k}(\gamma_k + b_k x)$, but its role in the $\delta \mapsto \bstar$
-    map is not derived.
+    O12's correction shows this observable carries three structurally distinct
+    exponent-like quantities — the finite-$q$ fitted slope, the unfolded intrinsic
+    exponent $\delta_{\mathrm{exact}}=3$, and a compact scaling function at the
+    saturation scale $n\asymp q$ — and that the O3--O7 derivation does not specify
+    which of these its input $\delta$ is drawn from.
+    The central coordinate $\gamma$ is not part of this mismatch: it is present in
+    the fingerprint~\eqref{eq:fingerprint} but algebraically absent from
+    $\Sigma_n^{(\mathbf{c})}$ itself (O12, Remark on blindness to $a,\gamma$).
   \end{enumerate}
 
   The present paper tests S1 directly: does $\dhat(q)$ drift toward
@@ -277,6 +305,19 @@ and Requalification of the
   where the measurement becomes most reliable, ruling out the possibility that
   the observed downward trend is a transient numerical artefact.
 
+  \begin{remark}[Independent confirmation of O12's exact asymptotic result]
+    \label{rem:confirms-o12}
+    O12's corrective revision derives, in closed form, that the unfolded
+    intrinsic exponent of this construction is exactly $\delta_{\mathrm{exact}}=3$,
+    in the double limit $q\to\infty$, $n\to\infty$, $n=o(\sqrt q)$.
+    This proposition's decreasing sequence
+    $4.80\to4.52\to4.27\to3.59$ — collected independently, before that closed
+    form existed — is direct numerical evidence \emph{for} this exact result: it
+    is exactly the finite-$q$ crossover behaviour O12's Section~6 predicts for
+    slopes fitted below the fully unfolded regime, converging toward, not away
+    from, $3$.
+  \end{remark}
+
   \section{Analysis: Non-Monotonicity, Convergence, Variance Reduction}
   \label{sec:analysis}
 
@@ -329,7 +370,9 @@ and Requalification of the
   \[
     V_n^{\max}(29) = 5.20, \quad
     V_n^{\max}(61) = 2.75, \quad
-    V_n^{\max}(101) = 1.60, \quad
+    V_n^{\max}(101) = 1.60,
+  \]
+  \[
     V_n^{\max}(151) = 0.65, \quad
     V_n^{\max}(211) = 0.30.
   \]
@@ -340,13 +383,20 @@ and Requalification of the
   The sequence crosses the condition~(E2) threshold $\varepsilon_E = 1$
   between $q = 101$ and $q = 151$.
 
-  The structural interpretation is as follows.
-  As $q$ grows, generic blocks $\mathbf{c}$ span a larger fraction of the
-  representation variety of $\Gq$, and the central phase
-  $\psi_{c_k}(\gamma_k + b_k x)$ diversifies more uniformly across blocks
-  within each BFS shell.
-  Individual block dynamics converge toward the ensemble mean, and the mean
-  exponent $\dhat$ acquires the status of a universal block-level property.
+  The structural interpretation, established exactly by O12's correction, is
+  combinatorial rather than representation-theoretic.
+  A generic block reduces to a projective pair $(\alpha,\beta)$ indexing at most
+  nine covering centres in $\mathbb{Z}/q\mathbb{Z}$; a positive but $O(1/q)$
+  fraction of generic blocks is \emph{degenerate} (fewer than nine distinct
+  centres, e.g.\ $\alpha=0$ or $\alpha=\pm2\beta$), contributing a smaller
+  incremental rank than the generic value of $18$.
+  As $q$ grows, this degenerate fraction shrinks as $O(1/q)$, so an increasing
+  proportion of sampled blocks share the same incremental-rank behaviour,
+  reducing inter-block variance and moving the mean exponent $\dhat$ toward a
+  genuinely block-by-block property, not merely an ensemble mean.
+  No central-phase or coherence mechanism is involved: the effect is a pure
+  finite-sampling artefact of how many blocks happen to be degenerate at a
+  given prime.
 
   A direct consequence is that the measurement quality improves with $q$:
   the $q = 151$ extraction ($10$ points, $R^2 = 0.993$, E2 satisfied) and the
@@ -368,47 +418,59 @@ and Requalification of the
   best-fitting descriptive law.
   The key constraint from this fit is negative: no extrapolation produces
   $\delta_\infty > 5.0$.
-  Whether $\delta_\infty$ exists as a finite plateau or the sequence continues
-  decreasing remains open.
+  Whether a finite plateau $\delta_\infty$ exists is no longer open at the level
+  of the underlying construction: O12's corrective revision derives it exactly,
+  $\delta_\infty = \delta_{\mathrm{exact}} = 3$, analytically rather than by
+  extrapolation.
+  What remains open is the ad hoc phenomenological model~\eqref{eq:scaling}
+  itself — the present five-point log-linear fit is a descriptive law for the
+  finite-$q$ crossover behaviour, not (and not intended as) a re-derivation of
+  the exact asymptotic value.
 
   \begin{remark}
-    The scaling law~\eqref{eq:scaling} is not derived from first principles.
-    An analytical derivation of the correction exponent $\alpha$ from the
-    metaplectic phase structure of $\rho_{\mathbf{c}}$ and the BFS geometry
-    of $\Gq$ is open direction~O13-O2 (Section~\ref{sec:open}).
+    The scaling law~\eqref{eq:scaling} is not derived from first principles, and
+    is not the metaplectic-phase effect originally conjectured: O12's exact
+    reduction shows $\Sigma_n^{(\mathbf{c})}$ is algebraically blind to the
+    central phase (Section~\ref{sec:question}), so no metaplectic mechanism can
+    contribute to $\alpha$.
+    The correct mechanism, established by O12 Section~6, is combinatorial: the
+    crossover slope combines Heisenberg shell growth ($n^{-3}$ intrinsically)
+    with the collapsing survival probability of the block saturation-depth
+    distribution as $n$ approaches the linear-in-$q$ saturation scale.
+    A closed-form derivation of $\alpha$ specifically for the
+    model~\eqref{eq:scaling} from that mechanism remains open direction~O13-O2
+    (Section~\ref{sec:open}).
   \end{remark}
 
   \section{Physical Consequence: The
   \texorpdfstring{$\delta$--$\bstar$}{delta--beta*} Tension}
   \label{sec:tension}
 
-  \subsection{Propagation through the structural relation}
+  \subsection{No constraint is propagated through the structural relation}
 
-    Following O12 Section~7.1, we maintain the three-level distinction:
+    O12's original Section~7.1 maintained a three-level distinction and
+    propagated its Level~1 measurement through Level~2 ($\bstar=1/(\delta+1/2)$,
+    O7~\cite{Beau2026a11}) to a numeric Level~3 comparison against
+    $\bstar\in(0.09,0.13)$ from charged lepton mass ratios~\cite{Beau2026a7}.
+    O12's corrective revision withdraws that propagation, and the present paper
+    follows suit rather than propagating its own five-prime sequence in its
+    place.
 
-    \emph{Level~1 (empirical).}
-    $\dhat(q) < 5.0$ for all $q \in \{29, 61, 101, 151, 211\}$, with a
-    monotone decrease from $q = 61$ to $q = 211$.
-    The log-linear fit extrapolates to $\delta \approx 3.4$--$3.9$ at $q \geq 307$,
-    established by the present paper.
-
-    \emph{Level~2 (structural).} $\bstar = 1/(\delta + 1/2)$, derived in
-    O7~\cite{Beau2026a11} from the subdiffusive valence growth law of
-    O4~\cite{Beau2026a8}, independently of the lepton data.
-
-    \emph{Level~3 (phenomenological).} $\bstar \in (0.09, 0.13)$, from
-    charged lepton mass ratios in O3~\cite{Beau2026a7}.
-
-    Propagating Level~1 through Level~2:
-    \[
-      \bstar(\dhat = 3.59,\ q=211) \approx 0.243, \quad
-      \bstar(\dhat = 4.27,\ q=151) \approx 0.190, \quad
-      \bstar(\delta_\infty^{\log} \approx 3.4) \approx 0.256.
-    \]
-    All values are outside the Level~3 window.
-    For reference, reaching $\bstar = 0.13$ requires $\delta \approx 7.2$;
-    reaching $\bstar = 0.09$ requires $\delta \approx 10.6$.
-    Neither value is consistent with any extrapolation of the present data.
+    The reason is structural, not a matter of which numbers to use.
+    This construction carries (at least) three distinct quantities that could
+    each be read as ``the'' $\delta$ input to $g(\delta)=1/(\delta+\tfrac12)$:
+    the finite-$q$ fitted slope (this paper's own sequence
+    $4.42\to4.80\to4.52\to4.27\to3.59$), the unfolded intrinsic exponent
+    $\delta_{\mathrm{exact}}=3$ that this sequence is empirically converging
+    toward (Remark~\ref{rem:confirms-o12}), and the compact scaling function at
+    the saturation scale $n\asymp q$, which carries no exponent at all.
+    The O3--O7 derivation of $g(\delta)$ does not, on its own text, specify
+    which of these its input is drawn from.
+    Substituting any one of them — including the exact value $3$ — without
+    first settling this would repeat exactly the category error O12's
+    correction identifies.
+    No numeric constraint on $\bstar$ is therefore drawn from the present
+    paper.
 
   \subsection{Closure of S1}
 
@@ -421,39 +483,45 @@ and Requalification of the
     While a second seed at $q = 211$ would strengthen the robustness point, the
     central result of S1's closure rests on $q \in \{101, 151\}$ alone.
 
-  \subsection{S2 and the role of the central coordinate}
+  \subsection{S2, correctly stated: a regime mismatch, not a central-coordinate effect}
 
-    Source~S2 identifies a structural mismatch: the exact-block observable
-    retains the central coordinate $\gamma$ through the phase
-    $\psi_{c_k}(\gamma_k + b_k x)$ in the fingerprint~\eqref{eq:fingerprint},
-    a degree of freedom confirmed to be dynamically active, but absent from
-    the proxy-level derivation of the $\delta \mapsto \bstar$ relation.
-    This identifies the central coordinate as a genuine additional degree of
-    freedom in the exact-block observable, whose contribution is dynamically
-    active but not accounted for in the original proxy-level derivation of
-    the $\delta \mapsto \bstar$ relation.
+    Source~S2, as O12 originally posed it, attributed the mismatch to the central
+    coordinate $\gamma$: the exact-block observable was said to retain $\gamma$
+    through the phase $\psi_{c_k}(\gamma_k + b_k x)$ in the
+    fingerprint~\eqref{eq:fingerprint} as a degree of freedom ``confirmed to be
+    dynamically active'' but absent from the proxy-level O7 derivation.
+    This attribution is false, not merely unconfirmed.
+    O12's corrective revision proves that $\Sigma_n^{(\mathbf{c})}$ depends on the
+    visited group elements only through their $b$-coordinates: the phase
+    $\psi_{c_k}(\gamma_k+b_kx)$ is present in the fingerprint but is exactly,
+    algebraically absent from the rank observable that produces $\dhat$, for
+    every prime, every generic block, and every shell.
+    Since the present paper computes $\Sigma_n^{(\mathbf{c})}$ with the identical
+    pipeline as O12, this blindness applies to the $q\in\{101,151,211\}$ results
+    reported here with the same force it applies to O12's own $q\leq61$ results.
+    No coherence or central-phase mechanism contributes to $\dhat$ at any prime
+    tested in this paper.
 
-    Two points distinguish the exact-block $\delta \mapsto \bstar$ map from
-    the O7 derivation and are not yet resolved:
+    One point from O12's original S2 survives, unrelated to $\gamma$:
 
-    \begin{enumerate}
+    \begin{itemize}
       \item \emph{Normalisation.}
       $\Sigma_n^{(\mathbf{c})}$ is normalised by $|S_n|$ (shell size), not by
       the block dimension~$q$.
       The O7 derivation proceeds through a proxy-level capacity law where this
       normalisation is absorbed; its effect in the exact-block setting is not
       derived.
-      \item \emph{Central-phase contribution.}
-      The phase $\psi_{c_k}(\gamma_k + b_k x)$ mixes $\gamma_k$ and $b_k$
-      in a block-dependent way.
-      The capacity exponent $\dhat$ averages over generic blocks $\mathbf{c}$;
-      the dependence of this average on the central contribution, and its
-      mapping onto $\bstar$, is not yet established.
-    \end{enumerate}
+    \end{itemize}
 
-    These two points constitute the precise content of S2.
-    They define the next problem: deriving the $\delta \mapsto \bstar$
-    relation in the exact-block setting
+    The genuine content of S2 is therefore the regime-mismatch question of
+    Section~\ref{sec:tension}.1: not a missing physical degree of freedom, but
+    an unresolved choice among three structurally distinct quantities — the
+    finite-$q$ fitted slope, the unfolded exponent $\delta_{\mathrm{exact}}=3$,
+    and the saturation-scale scaling function — any of which the O3--O7
+    derivation might have intended as its input, together with the unresolved
+    normalisation point above.
+    These define the next problem: re-auditing the $\delta \mapsto \bstar$
+    derivation itself against this regime classification
     (open direction~O13-O1, Section~\ref{sec:open}).
 
   \section{Conclusion}
@@ -471,33 +539,42 @@ and Requalification of the
     the extracted exponents are block-by-block properties of the exact Weil
     representation, not artefacts of averaging.
     \item No fitting strategy applied to the five-prime dataset produces
-    $\delta_\infty > 5.0$; the log-linear extrapolation gives
-    $\delta \approx 3.4$--$3.9$ at $q \geq 307$, implying
-    $\bstar \approx 0.24$--$0.26$, outside the phenomenological window
-    by a factor of $\approx 2$.
+    $\delta_\infty > 5.0$.
+    O12's corrective revision independently derives the exact value the
+    sequence is converging toward: $\delta_\infty=\delta_{\mathrm{exact}}=3$
+    (Remark~\ref{rem:confirms-o12}).
+    No $\bstar$ constraint is propagated from this value or from any point of
+    the sequence (Section~\ref{sec:tension}.1).
     \item The finite-size hypothesis~S1 is ruled out in its strong form.
   \end{enumerate}
 
   The programme has followed the hypothesis to its conclusion, tested it
-  rigorously, found it unsupported, and identified precisely where the
-  gap lies: in the $\delta \mapsto \bstar$ relation at the exact-block level,
-  where the central coordinate $\gamma$ contributes a degree of freedom whose
-  physical mapping onto $\bstar$ is not yet derived.
+  rigorously, and found it unsupported.
+  The gap does not lie in a central-coordinate degree of freedom — O12's
+  correction proves $\gamma$ contributes nothing to this observable, at every
+  prime including the ones tested here — but in an unresolved choice among
+  three structurally distinct quantities the $\delta \mapsto \bstar$ relation
+  might take as input, compounded by the unresolved effect of normalising
+  $\Sigma_n^{(\mathbf{c})}$ by shell size rather than block dimension
+  (Section~\ref{sec:tension}.3).
 
   \subsection*{Open directions}
     \label{sec:open}
 
     \textbf{O13-O1 (Exact-block $\delta \mapsto \bstar$ relation).}
-    Re-derive the structural relation between $\dhat$ and $\bstar$,
-    accounting for the normalisation of $\Sigma_n^{(\mathbf{c})}$ by $|S_n|$,
-    the block dimension~$q$, and the contribution of the central phase to the
-    incremental span.
+    Re-audit the O3--O7 derivation to determine which of the three
+    structurally distinct quantities identified in
+    Section~\ref{sec:tension}.1 — the finite-$q$ fitted slope, the unfolded
+    exponent $\delta_{\mathrm{exact}}=3$, or the saturation-scale scaling
+    function — it takes as input, and account for the normalisation of
+    $\Sigma_n^{(\mathbf{c})}$ by $|S_n|$ rather than the block dimension~$q$.
     This is the primary open direction.
 
     \textbf{O13-O2 (Scaling exponent $\alpha$).}
     Derive the correction exponent $\alpha$ in $\delta(q) = \delta_\infty +
-  a/q^\alpha$ from the metaplectic phase structure of $\rho_{\mathbf{c}}$
-    and the BFS geometry.
+    a/q^\alpha$ from the combinatorial shell-growth/saturation-depth mechanism
+    of O12 Section~6, not from any metaplectic-phase structure (which
+    Section~\ref{sec:question} shows plays no role in this observable).
 
     \textbf{O13-O3 (Second seed at $q \in \{151, 211\}$).}
     Both $q = 151$ ($M_{\mathrm{block}} = 10$, ${\approx}\,28$~min) and

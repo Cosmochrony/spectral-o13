@@ -408,16 +408,18 @@ and Requalification of the
   At small $q$ relative to the fitting window, a large fraction of the sampled
   blocks have already reached or passed this saturation depth by the window's
   upper boundary, so the ensemble mixes ``live'' blocks (still contributing new
-  rank) with already-saturated ones (contributing none) at every depth in the
-  window — the same mean-estimator conflation O12's audit identifies in the
-  original extraction.
+  rank) with already-saturated ones (contributing none), increasingly toward
+  the window's upper boundary — the same mean-estimator conflation O12's
+  corrective revision identifies in the original extraction (O12
+  Section~6.5).
   As $q$ grows, the saturation depth grows linearly while the fitting window
-  stays short (Table~\ref{tab:params}), so a shrinking fraction of sampled
-  blocks saturate within the window, and the ensemble becomes more homogeneous.
-  (The much smaller fraction of blocks that are combinatorially
-  \emph{degenerate} — fewer than nine distinct covering centres from the
-  outset, e.g.\ $\alpha=0$ or $\alpha=\pm2\beta$ — is a separate effect and is
-  not the driver of the variance reduction observed here.)
+  grows far more slowly (Table~\ref{tab:params}), so a shrinking fraction of
+  sampled blocks saturate within the window, and the ensemble becomes more
+  homogeneous.
+  (The fraction of blocks that are combinatorially \emph{degenerate} — fewer
+  than nine distinct covering centres from the outset, e.g.\ $\alpha=0$ or
+  $\alpha=\pm2\beta$ — is a separate effect and is not the driver of the
+  variance reduction observed here.)
   No central-phase or coherence mechanism is involved: the effect is a pure
   finite-sampling artefact of how many blocks happen to already be saturated,
   not degenerate, at a given prime and window.

@@ -42,7 +42,7 @@ the analysis shows that:
 
 - the sequence of exact exponents
   \[
-  \hat\delta_{\mathrm{exact}} = 4.42,\,4.80,\,4.52,\,4.27,\,3.59
+  \hat\delta_{\mathrm{exact}} = 4.42,\,4.80,\,4.51,\,4.27,\,3.59
   \]
   at $q \in \{29,61,101,151,211\}$ exhibits a **strict monotone decrease**
   from $q = 61$ onward

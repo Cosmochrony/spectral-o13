@@ -44,8 +44,10 @@ the analysis shows that:
   \[
   \hat\delta_{\mathrm{exact}} = 4.42,\,4.80,\,4.51,\,4.27,\,3.59
   \]
-  at $q \in \{29,61,101,151,211\}$ exhibits a **strict monotone decrease**
-  from $q = 61$ onward
+  at $q \in \{29,61,101,151,211\}$ exhibits **one non-monotone step**
+  ($4.42 \to 4.80$, from $q=29$ to $q=61$), **followed by a strict monotone
+  decrease from $q = 61$ to $q = 211$** ($4.80\to4.51\to4.27\to3.59$) — the
+  sequence as a whole is not monotone
 - the measurement quality improves with $q$:
     - fitting window length increases from 4 to 11 points
     - inter-block variance decreases from $V_n^{\max} = 5.20$ to $0.30$
@@ -80,7 +82,9 @@ below, since no $\beta^*$ constraint is currently drawn at all.
 O13 introduces several decisive advances:
 
 - extension of the exact computation to larger primes
-- a **monotone decreasing regime** of $\hat\delta_{\mathrm{exact}}$
+- identification of a **strict monotone decreasing regime** of
+  $\hat\delta_{\mathrm{exact}}$ from $q=61$ to $q=211$ (not from $q=29$: the
+  sequence rises from $q=29$ to $q=61$ before decreasing)
 - a systematic analysis of convergence:
     - failure of $1/q$ scaling
     - log-linear behaviour without plateau

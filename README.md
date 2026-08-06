@@ -6,10 +6,13 @@ This work extends the **spectral admissibility sub-programme** by testing the
 finite-size hypothesis left open in **O12**, through an extension of the exact
 Weil-block computation to larger primes.
 
-While **O12** established that the exact Weil projection yields a higher decay
-exponent than the proxy and identified a tension with the phenomenological
-target for $\beta^*$, it left open whether this mismatch could be explained
-as a finite-size effect.
+**O12** measured a higher finite-$q$ decay exponent than the proxy and
+identified a tension with the phenomenological target for $\beta^*$; its
+corrective revision shows that finite-$q$ value is a crossover statistic, not
+an intrinsic asymptotic exponent, and derives the intrinsic unfolded exponent
+exactly ($\delta_{\mathrm{exact}}=3$), independent of the central coordinate
+$\gamma$. O12 originally left open whether the finite-$q$ mismatch could be
+explained as a finite-size effect.
 
 The present work answers this question by extending the computation to
 \[
@@ -39,7 +42,7 @@ the analysis shows that:
 
 - the sequence of exact exponents
   \[
-  \hat\delta_{\mathrm{exact}} = 4.42,\,4.80,\,4.52,\,4.27,\,3.59
+  \hat\delta_{\mathrm{exact}} = 4.42,\,4.80,\,4.51,\,4.27,\,3.59
   \]
   at $q \in \{29,61,101,151,211\}$ exhibits a **strict monotone decrease**
   from $q = 61$ onward
@@ -49,7 +52,9 @@ the analysis shows that:
     - $R^2 > 0.993$ throughout
 - condition (E2) is satisfied at $q \geq 151$, establishing **block-by-block
   universality**
-- no fitting strategy produces $\delta_\infty > 5.0$
+- no fitting strategy produces $\delta_\infty > 5.0$ — and O12's corrective
+  revision independently derives, in closed form, the exact value this
+  sequence converges toward: $\delta_\infty = \delta_{\mathrm{exact}} = 3$
 
 Thus:
 
@@ -66,7 +71,9 @@ O13 performs the decisive test left open by O12:
 - **O13**: asymptotic test and falsification of the finite-size explanation
 
 O13 is the first step where the discrepancy between theory and phenomenology
-is shown to be **structural rather than numerical**.
+is shown **not to be a finite-size artefact**; whether it is otherwise
+"structural" awaits the regime determination in the O3–O7 relation described
+below, since no $\beta^*$ constraint is currently drawn at all.
 
 # What O13 Adds
 
@@ -87,36 +94,43 @@ O13 introduces several decisive advances:
 # Interpretation of the Result
 
 The main conceptual outcome is that the mismatch with the phenomenological
-window for $\beta^*$ cannot be explained by finite-size effects.
+window for $\beta^*$ cannot be explained by finite-size effects — and, per
+O12's corrective revision, cannot be explained by a central-coordinate
+mechanism either, since the observable is exactly, algebraically blind to
+$\gamma$.
 
-Using the structural relation:
-\[
-\beta^* = \frac{1}{\delta + \tfrac12},
-\]
-the observed values imply:
-\[
-\beta^* \approx 0.19\text{--}0.26,
-\]
-well above the target range $(0.09, 0.13)$.
+No numeric $\beta^*$ value is propagated from O13's own $\hat\delta_{\mathrm{exact}}$
+sequence. O12's revision shows this construction carries several structurally
+distinct quantities — the finite-$q$ fitted slope, the unfolded intrinsic
+exponent $\delta_{\mathrm{exact}}=3$, and a saturation-scale scaling function —
+any of which the $\delta\mapsto\beta^*$ relation might have intended as its
+input, and the O3–O7 derivation does not specify which. Substituting any one
+of them, including $3$, would repeat the same error.
 
 The paper shows that:
 
 - no upward drift toward the target range occurs
 - improved statistics reinforce the discrepancy
-- the mismatch is therefore **structural**
+- the mismatch is **structural**, but not for the reason O13 originally proposed
 
 # Requalification of the δ–β* Tension
 
 O13 reclassifies the tension identified in O12:
 
 - not a finite-size artefact (**S1 rejected**)
-- but a **structural mismatch** in the exact observable (**S2**)
+- not a central-coordinate effect either — O12's correction proves $\gamma$
+  contributes nothing to this observable, at every prime including the ones
+  tested here
+- but an unresolved **regime mismatch**: which of the construction's several
+  structurally distinct quantities the $\delta\mapsto\beta^*$ relation takes
+  as input (**S2, correctly stated**)
 
-The source of the mismatch is identified as:
+The source of the mismatch is:
 
-- the presence of the central coordinate $\gamma$ in the exact observable
-- the normalisation of $\Sigma_n^{(c)}$ by $|S_n|$
-- the absence of these effects in the proxy-level derivation of $\delta \mapsto \beta^*$
+- the normalisation of $\Sigma_n^{(c)}$ by $|S_n|$, not by the block dimension $q$
+- the unresolved choice of regime (finite-$q$ crossover slope vs.\ the unfolded
+  exponent $\delta_{\mathrm{exact}}=3$ vs.\ the saturation-scale scaling
+  function) as the $\delta\mapsto\beta^*$ relation's intended input
 
 # Relation to Previous Steps
 
@@ -154,8 +168,10 @@ The programme now establishes:
 
 - the exact observable is correctly defined
 - the exact exponent is reliably measurable
-- the asymptotic trend is downward
-- the mismatch with phenomenology is intrinsic
+- the asymptotic trend is downward, toward the now-exact value $\delta_{\mathrm{exact}}=3$
+- the mismatch with phenomenology is not a finite-size artefact and not a
+  central-coordinate effect; whether it survives as a genuine tension depends
+  on an unresolved regime question, not yet on established physics
 
 # What O13 Resolves
 
@@ -170,33 +186,42 @@ O13 provides:
 
 The remaining problem is now clearly identified:
 
-- the mapping $\delta \mapsto \beta^*$ is not valid in the exact-block setting
+- the mapping $\delta \mapsto \beta^*$ is not yet valid in the exact-block
+  setting, because it is unclear which of three structurally distinct
+  quantities it should take as input
 
 The task is to:
 
-- re-derive the relation using the exact observable
-- incorporate the contribution of the central phase
-- understand the role of block normalisation
+- re-audit the O3–O7 derivation to determine which regime — the finite-$q$
+  crossover slope, the unfolded exponent $\delta_{\mathrm{exact}}=3$, or the
+  saturation-scale scaling function — is the intended input
+- understand the role of block normalisation ($|S_n|$ vs.\ block dimension $q$)
 
 # Open Directions
 
 1. **Exact-block δ → β* relation (O13-O1)**  
-   Derive the structural mapping in the exact Weil setting
+   Determine which regime the structural mapping should take as input, and
+   account for the normalisation difference
 
 2. **Scaling exponent α (O13-O2)**  
    Derive the correction law in:
    \[
    \delta(q) = \delta_\infty + \frac{a}{q^\alpha}
    \]
+   from the combinatorial shell-growth/saturation-depth mechanism of O12,
+   not from any central-phase effect
 
 3. **Second-seed validation (O13-O3)**  
    Quantify inter-seed variability at $q \in \{151, 211\}$
 
 4. **Larger-prime extension**  
-   Confirm persistence of the decreasing trend
+   Empirically confirm the fitted slope's continued convergence toward the
+   now-exact value $\delta_{\mathrm{exact}}=3$
 
-5. **Analytical derivation of δ**  
-   Connect the exponent to metaplectic structure and BFS geometry
+5. **Analytical derivation of δ — resolved by O12**  
+   The exponent is derived from Heisenberg shell growth and the block
+   saturation-depth law, not from metaplectic structure, which plays no role
+   in this observable
 
 # Status
 

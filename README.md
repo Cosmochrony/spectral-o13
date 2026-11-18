@@ -164,9 +164,9 @@ The programme now establishes:
 - the exact observable is correctly defined
 - the exact exponent is reliably measurable
 - the asymptotic trend is downward, toward the now-exact value $\delta_{\mathrm{exact}}=3$
-- the mismatch with phenomenology is not a finite-size artefact and not a
-  central-coordinate effect; whether it survives as a genuine tension depends
-  on an unresolved regime question, not yet on established physics
+- the finite-prime measurements do not drift upward toward the historical comparison range
+- no physical tension is derived from the reciprocal equality: that implication already fails
+  under the scalar premises, independently of regime choice
 
 # What O13 Resolves
 

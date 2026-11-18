@@ -29,7 +29,7 @@ measured within irreducible Weil blocks of the Heisenberg Cayley graph.
 # Core Result
 
 The paper establishes that the exact decay exponent does **not drift upward**
-toward the phenomenological target range at larger primes.
+toward the historical comparison range $[7.4,10.6]$ at larger primes.
 
 Starting from:
 
@@ -74,8 +74,8 @@ O13 performs the decisive test left open by O12:
 
 O13 is the first step where the discrepancy between theory and phenomenology
 is shown **not to be a finite-size artefact**; whether it is otherwise
-"structural" awaits the regime determination in the O3–O7 relation described
-below, since no $\beta^*$ constraint is currently drawn at all.
+"structural" awaits the regime determination for the historical reciprocal
+prescription described below, since no $\beta^*$ constraint is currently drawn at all.
 
 # What O13 Adds
 
@@ -107,13 +107,14 @@ No numeric $\beta^*$ value is propagated from O13's own $\hat\delta_{\mathrm{exa
 sequence. O12's revision shows this construction carries several structurally
 distinct quantities — the finite-$q$ fitted slope, the unfolded intrinsic
 exponent $\delta_{\mathrm{exact}}=3$, and a saturation-scale scaling function —
-any of which the $\delta\mapsto\beta^*$ relation might have intended as its
-input, and the O3–O7 derivation does not specify which. Substituting any one
+any of which the historical $\delta\mapsto\beta^*$ reciprocal prescription might have
+intended as its input. O6 proves only $\beta_{\mathrm{eff}}\leq 1/(\alpha+1/2)$, so the
+O3–O7 material neither derives that prescription nor specifies which. Substituting any one
 of them, including $3$, would repeat the same error.
 
 The paper shows that:
 
-- no upward drift toward the target range occurs
+- no upward drift toward the historical comparison range occurs
 - improved statistics reinforce the discrepancy
 - the mismatch is **structural**, but not for the reason O13 originally proposed
 
@@ -126,15 +127,15 @@ O13 reclassifies the tension identified in O12:
   contributes nothing to this observable, at every prime including the ones
   tested here
 - but an unresolved **regime mismatch**: which of the construction's several
-  structurally distinct quantities the $\delta\mapsto\beta^*$ relation takes
-  as input (**S2, correctly stated**)
+  structurally distinct quantities the historical $\delta\mapsto\beta^*$
+  prescription would take as input (**S2, correctly stated**)
 
 The source of the mismatch is:
 
 - the normalisation of $\Sigma_n^{(c)}$ by $|S_n|$, not by the block dimension $q$
 - the unresolved choice of regime (finite-$q$ crossover slope vs.\ the unfolded
   exponent $\delta_{\mathrm{exact}}=3$ vs.\ the saturation-scale scaling
-  function) as the $\delta\mapsto\beta^*$ relation's intended input
+  function) as the $\delta\mapsto\beta^*$ prescription's intended input
 
 # Relation to Previous Steps
 
@@ -190,21 +191,22 @@ O13 provides:
 
 The remaining problem is now clearly identified:
 
-- the mapping $\delta \mapsto \beta^*$ is not yet valid in the exact-block
-  setting, because it is unclear which of three structurally distinct
-  quantities it should take as input
+- the mapping $\delta \mapsto \beta^*$ is not derived (O6 supplies only a
+  one-sided bound), and in the exact-block setting it is also unclear which of
+  three structurally distinct quantities it would take as input
 
 The task is to:
 
-- re-audit the O3–O7 derivation to determine which regime — the finite-$q$
+- re-audit the O3–O7 material behind the historical reciprocal prescription to
+  determine which regime — the finite-$q$
   crossover slope, the unfolded exponent $\delta_{\mathrm{exact}}=3$, or the
   saturation-scale scaling function — is the intended input
 - understand the role of block normalisation ($|S_n|$ vs.\ block dimension $q$)
 
 # Open Directions
 
-1. **Exact-block δ → β* relation (O13-O1)**  
-   Determine which regime the structural mapping should take as input, and
+1. **Exact-block δ → β* prescription (O13-O1)**  
+   Determine which regime the historical reciprocal prescription would take as input, and
    account for the normalisation difference
 
 2. **Scaling exponent α (O13-O2)**  
@@ -238,7 +240,7 @@ This framework is now:
 
 It does not assume:
 
-- convergence toward the phenomenological target
+- convergence toward the historical comparison range
 - equivalence between proxy and exact observables
 - validity of the O7 relation in the exact setting
 

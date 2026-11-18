@@ -3,5 +3,6 @@
   "web_url": "https://cosmochrony.org/science/spectral/program/o13/",
   "main_tex": "tex/SpectralO13.tex",
   "zenodo_id": 19210831,
-  "doi": "10.5281/zenodo.19210831"
+  "doi": "10.5281/zenodo.19210831",
+  "notes": "Version 1.2 (alpha-2). Requalifies the interval [7.4, 10.6] as a historical comparison range and the reciprocal as the historical prescription, not an O3-O7 derivation: O6 proves only a conditional upper growth bound and supplies a countermodel to equality. The measured absence of upward drift of the exact-block exponent, the variance reduction and the withdrawal of numeric beta* constraints are unchanged."
 }

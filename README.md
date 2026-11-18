@@ -72,10 +72,9 @@ O13 performs the decisive test left open by O12:
 - **O12**: exact Weil-block extraction and tension identification
 - **O13**: asymptotic test and falsification of the finite-size explanation
 
-O13 is the first step where the discrepancy between theory and phenomenology
-is shown **not to be a finite-size artefact**; whether it is otherwise
-"structural" awaits the regime determination for the historical reciprocal
-prescription described below, since no $\beta^*$ constraint is currently drawn at all.
+O13 tests and rejects the strong finite-size hypothesis that the measured exponent would drift
+upward toward the historical comparison range. This does not establish a discrepancy with a derived
+physical prediction: O6 supplies only a conditional upper bound and a countermodel to reciprocal equality.
 
 # What O13 Adds
 
@@ -107,16 +106,14 @@ No numeric $\beta^*$ value is propagated from O13's own $\hat\delta_{\mathrm{exa
 sequence. O12's revision shows this construction carries several structurally
 distinct quantities — the finite-$q$ fitted slope, the unfolded intrinsic
 exponent $\delta_{\mathrm{exact}}=3$, and a saturation-scale scaling function —
-any of which the historical $\delta\mapsto\beta^*$ reciprocal prescription might have
-intended as its input. O6 proves only $\beta_{\mathrm{eff}}\leq 1/(\alpha+1/2)$, so the
-O3–O7 material neither derives that prescription nor specifies which. Substituting any one
-of them, including $3$, would repeat the same error.
+none of which derives the historical reciprocal equality. O6 supplies only its conditional upper bound
+and a countermodel to equality. The independent observable mismatch cannot repair that implication.
 
 The paper shows that:
 
 - no upward drift toward the historical comparison range occurs
 - improved statistics reinforce the discrepancy
-- the mismatch is **structural**, but not for the reason O13 originally proposed
+- the observable distinctions are structural; none derives a physical rate
 
 # Requalification of the δ–β* Tension
 
@@ -126,16 +123,9 @@ O13 reclassifies the tension identified in O12:
 - not a central-coordinate effect either — O12's correction proves $\gamma$
   contributes nothing to this observable, at every prime including the ones
   tested here
-- but an unresolved **regime mismatch**: which of the construction's several
-  structurally distinct quantities the historical $\delta\mapsto\beta^*$
-  prescription would take as input (**S2, correctly stated**)
-
-The source of the mismatch is:
-
-- the normalisation of $\Sigma_n^{(c)}$ by $|S_n|$, not by the block dimension $q$
-- the unresolved choice of regime (finite-$q$ crossover slope vs.\ the unfolded
-  exponent $\delta_{\mathrm{exact}}=3$ vs.\ the saturation-scale scaling
-  function) as the $\delta\mapsto\beta^*$ prescription's intended input
+- the historical reciprocal equality is not derived even in the scalar setting
+- the distinct exact-block regimes and shell-size normalisation remain additional issues;
+  choosing among them does not derive a physical rate
 
 # Relation to Previous Steps
 
@@ -189,25 +179,15 @@ O13 provides:
 
 # Residual Open Problem
 
-The remaining problem is now clearly identified:
-
-- the mapping $\delta \mapsto \beta^*$ is not derived (O6 supplies only a
-  one-sided bound), and in the exact-block setting it is also unclear which of
-  three structurally distinct quantities it would take as input
-
-The task is to:
-
-- re-audit the O3–O7 material behind the historical reciprocal prescription to
-  determine which regime — the finite-$q$
-  crossover slope, the unfolded exponent $\delta_{\mathrm{exact}}=3$, or the
-  saturation-scale scaling function — is the intended input
-- understand the role of block normalisation ($|S_n|$ vs.\ block dimension $q$)
+No choice among the finite-window slope, unfolded exponent or saturation-scale function derives
+the historical reciprocal prescription. O6's countermodel refutes the scalar implication already;
+the observable and normalisation mismatches are additional issues.
 
 # Open Directions
 
-1. **Exact-block δ → β* prescription (O13-O1)**  
-   Determine which regime the historical reciprocal prescription would take as input, and
-   account for the normalisation difference
+1. **Independent capacity-to-rate construction (O13-O1)**
+   Supply a growth carrier, account for shell-size versus block-dimension normalisation, and
+   independently derive a rate-selection law consistent with the scalar bound and countermodel.
 
 2. **Scaling exponent α (O13-O2)**  
    Derive the correction law in:
@@ -242,7 +222,7 @@ It does not assume:
 
 - convergence toward the historical comparison range
 - equivalence between proxy and exact observables
-- validity of the O7 relation in the exact setting
+- validity of the historical reciprocal equality, even in the scalar setting
 
 # Repository Structure
 

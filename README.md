@@ -138,7 +138,7 @@ O13 preserves all previous structural results:
 - amplification via O3
 - structural bound via O4
 - admissible-frontier dynamics via O5
-- no-go via O6
+- saturation of the O6 Steinberg-matrix fingerprint within a few BFS radii
 - capacity formulation via O7
 - geometric obstruction via O8
 - polynomial-growth resolution via O9
@@ -213,7 +213,7 @@ the observable and normalisation mismatches are additional issues.
 
 This framework is now:
 
-- free of algebraic obstruction (**O6**)
+- beyond the saturating fixed fingerprints of **O5–O6**
 - free of geometric obstruction (**O8 → O9**)
 - free of representation obstruction (**O10 → O11 → O12**)
 - tested asymptotically (**O13**)
